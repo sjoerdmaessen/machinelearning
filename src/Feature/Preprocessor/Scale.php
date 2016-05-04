@@ -17,12 +17,15 @@ class Scale
      */
     static public function rescale($input, $currentMin = 0, $currentMax = 100, $newMin = 0, $newMax = 1)
     {
+        $currentRange = ($currentMax - $currentMin);
+        $newRange = ($newMax - $newMin);
+
         if (is_array($input)) {
             foreach ($input as &$value) {
-                $value = $newMin + ($newMax - $newMin) * (($value - $currentMin) / ($currentMax - $currentMin));
+                $value = $newMin + $newRange * (($value - $currentMin) / $currentRange);
             }
         } else {
-            $input = $newMin + ($newMax - $newMin) * (($input - $currentMin) / ($currentMax - $currentMin));
+            $input = $newMin + $newRange * (($input - $currentMin) / $currentRange);
         }
 
         return $input;
