@@ -1,5 +1,5 @@
 <?php
-namespace Sjoerdmaessen\MachineLearning\Preprocessor;
+namespace Sjoerdmaessen\MachineLearning\Feature\Preprocessor;
 
 /**
  * Class Text
