@@ -3,7 +3,6 @@ namespace Sjoerdmaessen\MachineLearning\Feature\Preprocessor;
 
 /**
  * Class Scale
- * @package Sjoerdmaessen\MachineLearning\Preprocessor
  */
 class Scale
 {

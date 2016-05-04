@@ -3,7 +3,6 @@ namespace Sjoerdmaessen\MachineLearning\Feature\Preprocessor;
 
 /**
  * Class Text
- * @package Sjoerdmaessen\MachineLearning\Preprocessor
  */
 class Text
 {
