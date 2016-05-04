@@ -1,2 +1,2 @@
 # machinelearning
-Tools for data mining and analysis in PHP
+Tools for data mining, analysis and predictions in PHP.

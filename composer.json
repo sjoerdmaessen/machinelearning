@@ -1,0 +1,29 @@
+{
+  "name": "sjoerdmaessen/machinelearning",
+  "type": "library",
+  "license": "MIT",
+  "homepage": "https://github.com/sjoerdmaessen/machinelearning",
+  "description": "Tools for data mining, analysis and predictions in PHP.",
+  "keywords": ["machine learning","machine","learning","svm"],
+  "authors": [
+    {
+      "name": "Sjoerd Maessen",
+      "email": "machinelearning@sjoerdmaessen.nl",
+      "homepage": "https://github.com/sjoerdmaessen",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "machinelearning@sjoerdmaessen.nl",
+    "issues": "https://github.com/sjoerdmaessen/machinelearning/issues",
+    "source": "https://github.com/sjoerdmaessen/machinelearning"
+  },
+  "require": {
+    "php": ">=5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sjoerdmaessen\\MachineLearning\\": "src"
+    }
+  }
+}
