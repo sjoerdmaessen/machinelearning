@@ -3,7 +3,7 @@ namespace Sjoerdmaessen\MachineLearning\Dataset\Validator;
 
 use Sjoerdmaessen\MachineLearning\Dataset\ValidatorAbstract;
 
-class Libsvm extends ValidatorAbstract
+class SVMLight extends ValidatorAbstract
 {
     /**
      * Main check method
@@ -32,13 +32,14 @@ class Libsvm extends ValidatorAbstract
             // Validate line structure
             $this->validateEOL($currentLineNumber, $line);
 
+            $nodes = array_filter(preg_split('/\s+/', $line));
+
             // Validate label
-            $label = array_shift($features);
+            $label = array_shift($nodes);
             $this->validateLabel($currentLineNumber, $label);
 
             // Validate features format
-            $features = array_filter(preg_split('/\s+/', $line));
-            $this->validateFeatures($currentLineNumber, $features);
+            $this->validateFeatures($currentLineNumber, $nodes);
 
             // Increate the line number
             $currentLineNumber++;

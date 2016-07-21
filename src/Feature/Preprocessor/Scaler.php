@@ -4,7 +4,7 @@ namespace Sjoerdmaessen\MachineLearning\Feature\Preprocessor;
 /**
  * Class Scale
  */
-class Scale
+class Scaler
 {
     /**
      * Rescales a number from one scale to a number on another scale
@@ -15,8 +15,12 @@ class Scale
      * @param int $newMin
      * @param int $newMax
      */
-    static public function rescale($input, $currentMin = 0, $currentMax = 100, $newMin = 0, $newMax = 1)
+    public function rescale($input, $currentMin = 0, $currentMax = 100, $newMin = 0, $newMax = 1)
     {
+        if(is_bool($input)) {
+            return $input ? $newMax : $newMin;
+        }
+
         $currentRange = ($currentMax - $currentMin);
         $newRange = ($newMax - $newMin);
 
@@ -29,6 +33,24 @@ class Scale
         }
 
         return $input;
+    }
+
+    /**
+     * Returns the percentage difference between two values
+     *
+     * @param $value1
+     * @param $value2
+     * @return float|int
+     */
+    public function diff($value1, $value2)
+    {
+        if($value2 == 0) {
+            $percentage = 100;
+        } else {
+            $percentage = ($value1 - $value2) / $value2 * 100;
+        }
+
+        return $percentage;
     }
 
 }
