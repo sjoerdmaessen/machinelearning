@@ -1,8 +1,8 @@
 <?php
 
-namespace MLSjoerdmaessen\MachineLearning\Dataset\Writer;
+namespace Sjoerdmaessen\MachineLearning\Dataset\Writer;
 
-use MLSjoerdmaessen\MachineLearning\Dataset\WriterAbstract;
+use Sjoerdmaessen\MachineLearning\Dataset\WriterAbstract;
 
 class SVMLight extends WriterAbstract
 {

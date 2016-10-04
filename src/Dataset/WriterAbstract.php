@@ -1,6 +1,6 @@
 <?php
 
-namespace MLSjoerdmaessen\MachineLearning\Dataset;
+namespace Sjoerdmaessen\MachineLearning\Dataset;
 
 abstract class WriterAbstract
 {
